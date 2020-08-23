@@ -1,7 +1,7 @@
-let selectedPlayer = document.querySelector('#selected-player');
-let selectedWinner = document.querySelector('#selected-winner');
+var selectedPlayer = document.getElementById('selected-player');
+var selectedWinner = document.getElementById('selected-winner');
 
-let player, winner = null;
+var player, winner = null;
 
 changePlayer('X');
 
@@ -10,7 +10,7 @@ function chooseSquare(id) {
         return;
     }
 
-    let square = document.getElementById(id);
+    var square = document.getElementById(id);
     if (square.textContent !== '-') {
         return;
     }
@@ -34,15 +34,15 @@ function changePlayer(value) {
 }
 
 function checkWinner() {
-    let squareOne = document.querySelector('#1');
-    let squareTwo = document.querySelector('#2');
-    let squareThree = document.querySelector('#3');
-    let squareFour = document.querySelector('#4');
-    let squareFive = document.querySelector('#5');
-    let squareSix = document.querySelector('#6');
-    let squareSeven = document.querySelector('#7');
-    let squareEight = document.querySelector('#8');
-    let squareNine = document.querySelector('#9');
+    var squareOne = document.getElementById(1);
+    var squareTwo = document.getElementById(2);
+    var squareThree = document.getElementById(3);
+    var squareFour = document.getElementById(4);
+    var squareFive = document.getElementById(5);
+    var squareSix = document.getElementById(6);
+    var squareSeven = document.getElementById(7);
+    var squareEight = document.getElementById(8);
+    var squareNine = document.getElementById(9);
 
     if (checkSequence(squareOne, squareTwo, squareThree)) {
         changeSquareColor(squareOne, squareTwo, squareThree);
@@ -104,7 +104,7 @@ function changeSquareColor(squareOne, squareTwo, squareThree) {
 }
 
 function checkSequence(squareOne, squareTwo, squareThree) {
-    let isequal = false;
+    var isequal = false;
 
     if (squareOne.textContent !== '-' && squareOne.textContent === squareTwo.textContent && squareTwo.textContent === squareThree.textContent) {
         isequal = true;
@@ -117,8 +117,8 @@ function restart() {
     winner = null;
     selectedWinner.textContent = '';
 
-    for (let i = 1; i <= 9; i++) {
-        let square = document.getElementById(i);
+    for (var i = 1; i <= 9; i++) {
+        var square = document.getElementById(i);
         square.style.background = '#eeeeee';
         square.style.color = '#eeeeee';
         square.textContent = '-';
