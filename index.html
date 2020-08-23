@@ -9,19 +9,19 @@
 <body>
     <h1>tic-tac-toe</h1>
     <div>
-        <div class="square" id="1">-</div>
-        <div class="square" id="2">-</div>
-        <div class="square" id="3">-</div>
+        <div class="square" id="1" onclick="chooseSquare(this.id)">-</div>
+        <div class="square" id="2" onclick="chooseSquare(this.id)">-</div>
+        <div class="square" id="3" onclick="chooseSquare(this.id)">-</div>
     </div>
     <div>
-        <div class="square" id="4">-</div>
-        <div class="square" id="5">-</div>
-        <div class="square" id="6">-</div>
+        <div class="square" id="4" onclick="chooseSquare(this.id)">-</div>
+        <div class="square" id="5" onclick="chooseSquare(this.id)">-</div>
+        <div class="square" id="6" onclick="chooseSquare(this.id)">-</div>
     </div>
     <div>
-        <div class="square" id="7">-</div>
-        <div class="square" id="8">-</div>
-        <div class="square" id="9">-</div>
+        <div class="square" id="7" onclick="chooseSquare(this.id)">-</div>
+        <div class="square" id="8" onclick="chooseSquare(this.id)">-</div>
+        <div class="square" id="9" onclick="chooseSquare(this.id)">-</div>
     </div>
     <div class="player">
         <label>player:</label>
@@ -32,9 +32,8 @@
         <label id="selected-winner"></label>
     </div>
     <div>
-        <button>restart</button>
+        <button onclick="restart()">restart</button>
     </div>
-
-    <script type="text/javascript" src=".js"></script>
 </body>
+<script type="text/javascript" src="script.js"></script>
 </html>
